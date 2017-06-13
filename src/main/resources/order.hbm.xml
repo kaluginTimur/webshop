@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="ru.nc.webshop1.entity.ShopOrder" table="shoporder">
+    <id name="id">
+      <generator class="increment"/>
+    </id>
+    <property name="userid">
+      <column name="USER_ID" not-null="true"/>
+    </property>
+    <property name="items">
+      <column name="ORDER_ITEMS" not-null="true"/>
+    </property>
+    <property name="price">
+      <column name="ORDER_PRICE" not-null="true"/>
+    </property>
+    <property name="status">
+      <column default="0" name="ORDER_STATUS" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

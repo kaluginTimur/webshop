@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/webshopdb</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    <property name="c3p0.min_size">3</property>
+    <property name="c3p0.max_size">5</property>
+    <property name="c3p0.timeout">1800</property>
+    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <property name="cache.use_query_cache">false</property>
+    <property name="cache.use_minimal_puts">false</property>
+    <property name="max_fetch_depth">3</property>
+    <property name="show_sql">false</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="current_session_context_class">thread</property>
+    <mapping resource="bicycle.hbm.xml"/>
+    <mapping resource="customer.hbm.xml"/>
+    <mapping resource="manager.hbm.xml"/>
+    <mapping resource="stock.hbm.xml"/>
+    <mapping resource="cart.hbm.xml"/>
+    <mapping resource="order.hbm.xml"/>
+    <mapping resource="image.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

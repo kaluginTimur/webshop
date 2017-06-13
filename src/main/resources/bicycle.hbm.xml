@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>  
+    <class name="ru.nc.webshop1.entity.Bicycle" table="bicycle">  
+        <id name="id">  
+            <generator class="increment" />  
+        </id>  
+            
+        <property name="model">
+            <column name="BICYCLE_MODEL" length="30" />
+        </property>  
+        <property name="type">
+            <column name="BICYCLE_TYPE" length="20" />
+        </property> 
+        <property name="weight">
+            <column name="BICYCLE_WEIGHT" />
+        </property>
+        <property name="wheeldiam">
+            <column name="BICYCLE_WHEEL" />
+        </property>
+        <property name="price">
+            <column name="BICYCLE_PRICE" />
+        </property>
+        
+        <one-to-one name="stock" class="ru.nc.webshop1.entity.Stock"
+                    cascade="save-update">
+        </one-to-one>
+        <one-to-one name="image" class="ru.nc.webshop1.entity.Image"
+                    cascade="save-update">
+        </one-to-one>
+    </class>  
+            
+</hibernate-mapping>  
