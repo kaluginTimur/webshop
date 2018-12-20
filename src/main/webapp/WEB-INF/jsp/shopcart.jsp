@@ -61,12 +61,12 @@
                                 <th>Опции</th>
                             </tr>          
                             <c:forEach var="item" items="${itemList}" varStatus="loop">
-                                <c:set var="ordercost" value="${ordercost = ordercost + item.price * amounts[loop.count - 1]}"/>
+                                <c:set var="ordercost" value="${ordercost + item.price * amounts[loop.count - 1]}"/>
                                 <tr>
                                     <td><img src="${item.image.path}" /></td>
                                     <td><c:out value="${item.model}" /></td>
                                     <td><c:out value="${item.price}" /></td>
-                                    <td><c:out value="${amounts[loop.count - 1]}" /></td> 
+                                    <td><c:out value="${amounts[loop.count - 1]}" /></td>
                                     <td><c:out value="${item.price * amounts[loop.count - 1]}" /></td>
                                     <td>
                                         <c:if test="${item.stock.amount > 0}">
@@ -75,7 +75,7 @@
                                         </c:if>
                                         <a href="${pageContext.request.contextPath}/shopcart/decrease?id=<c:out value='${item.id}' />">-</a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="${pageContext.request.contextPath}/shopcart/delete?id=<c:out value='${item.id}' />">Удалить позицию</a>                     
+                                        <a href="${pageContext.request.contextPath}/shopcart/delete?id=<c:out value='${item.id}' />">Удалить позицию</a>
                                     </td>
                                 </tr>
                             </c:forEach>

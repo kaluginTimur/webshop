@@ -4,13 +4,13 @@
   <session-factory>
     <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="connection.url">jdbc:mysql://localhost:3306/webshopdb</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/webshopdb?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8</property>
     <property name="connection.username">root</property>
     <property name="connection.password">root</property>
     <property name="c3p0.min_size">3</property>
     <property name="c3p0.max_size">5</property>
     <property name="c3p0.timeout">1800</property>
-    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    <property name="cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</property>
     <property name="cache.use_query_cache">false</property>
     <property name="cache.use_minimal_puts">false</property>
     <property name="max_fetch_depth">3</property>
