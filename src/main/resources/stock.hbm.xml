@@ -11,8 +11,7 @@
             </generator>
         </id>  
         
-        <one-to-one name="bicycle" class="ru.nc.webshop1.entity.Bicycle"
-                    constrained="true">
+        <one-to-one name="bicycle" class="ru.nc.webshop1.entity.Bicycle">
         </one-to-one>
         
         <property name="amount">
