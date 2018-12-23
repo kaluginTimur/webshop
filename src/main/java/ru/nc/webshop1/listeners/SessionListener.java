@@ -30,6 +30,7 @@ public class SessionListener implements HttpSessionListener {
             try {
                 shopCartListAll = shopCartDAO.getAll();
             } catch (SQLException e) {
+                System.err.println("ERROR in SessionListener." + e);
             }
             if (shopCartListAll != null && !shopCartListAll.isEmpty()) {
                 for (ShopCart sc : shopCartListAll) {
@@ -38,6 +39,7 @@ public class SessionListener implements HttpSessionListener {
                         try {
                             shopCartDAO.delete(sc);
                         } catch (SQLException e) {
+                            System.err.println("ERROR in SessionListener." + e);
                         }
                     }
                 }

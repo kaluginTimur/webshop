@@ -85,7 +85,7 @@
                     </c:if> 
                 </article>
             </main>
-            <footer align="right">Copyright &COPY; 2017</footer>
+            <footer align="right">Copyright &COPY; 2018</footer>
         </div>
     </body>
 </html>
